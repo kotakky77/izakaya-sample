@@ -1,0 +1,320 @@
+/* 全体のスタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "游ゴシック", "Yu Gothic", YuGothic, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+a {
+    color: #8B4513;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #A0522D;
+}
+
+/* ヘッダー */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #8B4513;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS P明朝", "MS 明朝", serif;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    font-weight: bold;
+    padding: 0.5rem;
+    position: relative;
+}
+
+nav ul li a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #8B4513;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+/* メインコンテンツ */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS P明朝", "MS 明朝", serif;
+    color: #8B4513;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #8B4513;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* トップページ */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #f5f5f5;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #8B4513;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS P明朝", "MS 明朝", serif;
+}
+
+.about {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.news {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS P明朝", "MS 明朝", serif;
+    color: #8B4513;
+}
+
+.news ul {
+    list-style: none;
+}
+
+.news li {
+    padding: 1rem 0;
+    border-bottom: 1px dotted #ddd;
+}
+
+.news .date {
+    display: inline-block;
+    min-width: 120px;
+    color: #666;
+}
+
+/* メニューページ */
+.menu-section h3 {
+    border-left: 5px solid #8B4513;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS P明朝", "MS 明朝", serif;
+    color: #8B4513;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h4 {
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS P明朝", "MS 明朝", serif;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* アクセスページ */
+.access-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.access-info h3 {
+    margin-bottom: 1rem;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS P明朝", "MS 明朝", serif;
+    color: #8B4513;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.map-container {
+    background-color: #eee;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.map-placeholder {
+    color: #999;
+}
+
+/* 予約フォームページ */
+.reservation-info {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reservation-form h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS P明朝", "MS 明朝", serif;
+    color: #8B4513;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group .required {
+    color: #e74c3c;
+}
+
+.form-group .note {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.form-submit button {
+    background-color: #8B4513;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-submit button:hover {
+    background-color: #A0522D;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .access-info {
+        grid-template-columns: 1fr;
+    }
+}
