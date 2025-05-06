@@ -299,6 +299,19 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.menu-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.menu-image:hover {
+    transform: scale(1.03);
+}
+
 .menu-item h4 {
     font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS P明朝", "MS 明朝", serif;
     color: #333;
