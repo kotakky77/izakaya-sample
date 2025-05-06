@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // ファビコンを動的に追加
+    const addFavicon = () => {
+        const head = document.querySelector('head');
+        
+        // icon要素の作成
+        const iconLink = document.createElement('link');
+        iconLink.rel = 'icon';
+        iconLink.href = 'img/favicon.svg';
+        iconLink.type = 'image/svg+xml';
+        
+        // shortcut icon要素の作成
+        const shortcutIconLink = document.createElement('link');
+        shortcutIconLink.rel = 'shortcut icon';
+        shortcutIconLink.href = 'img/favicon.svg';
+        shortcutIconLink.type = 'image/svg+xml';
+        
+        // head要素に追加
+        head.appendChild(iconLink);
+        head.appendChild(shortcutIconLink);
+    };
+    
+    // ファビコンを追加
+    addFavicon();
+    
     // ウェブサイト全体の共通機能をここに記述します
     console.log('ウェブサイトが読み込まれました');
     
